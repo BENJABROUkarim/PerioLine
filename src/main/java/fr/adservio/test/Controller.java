@@ -4,10 +4,10 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-
 
 @RestController
 public class Controller {
@@ -20,9 +20,15 @@ public class Controller {
 		return patientRepository.findAll();
 	}
 
-	@GetMapping("/patient/{id}")
-	public Optional<Patient> getPatient(@PathVariable int id) {
+	@GetMapping("/patients/{patientId}")
+	public Optional<Patient> getPatient(@PathVariable int patientId) {
 
-		return patientRepository.findById(id);
+		return patientRepository.findById(patientId);
+	}
+
+	@DeleteMapping("/patients/{patientId}")
+	public void deletePatient(@PathVariable int patientId) {
+
+		patientRepository.deleteById(patientId);
 	}
 }
