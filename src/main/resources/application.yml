@@ -1,0 +1,27 @@
+server:
+  port: 8090
+spring:
+  data:
+    rest:
+      defaultMediaType: application/json
+#    mongodb:
+#      uri: mongodb://perio:cHblqnfRNcytlrisOdOtlVTf23Sov5eL2pUkV1DACDEQsh1eAKKlTwcHcTjtO0BZJmYit5FTWy3f9nK6GU3oVA==@perio.documents.azure.com:10255/?ssl=true&replicaSet=globaldb
+#      database: perio
+#      host: perio.documents.azure.com:10255
+#      username: perio
+#      password: cHblqnfRNcytlrisOdOtlVTf23Sov5eL2pUkV1DACDEQsh1eAKKlTwcHcTjtO0BZJmYit5FTWy3f9nK6GU3oVA==
+#azure:
+#  documentdb:
+#    # Specify the DNS URI of your Azure Cosmos DB.
+#    uri: mongodb://perio.documents.azure.com:10255/
+#    # Specify the access key for your database.
+#    key: cHblqnfRNcytlrisOdOtlVTf23Sov5eL2pUkV1DACDEQsh1eAKKlTwcHcTjtO0BZJmYit5FTWy3f9nK6GU3oVA==
+#    # Specify the name of your database.
+#    database: perio
+    
+
+
+    
+      
+#cosmosdb:
+#  connection-string: mongodb://perio:cHblqnfRNcytlrisOdOtlVTf23Sov5eL2pUkV1DACDEQsh1eAKKlTwcHcTjtO0BZJmYit5FTWy3f9nK6GU3oVA==@perio.documents.azure.com:10255/?ssl=true&replicaSet=globaldb
