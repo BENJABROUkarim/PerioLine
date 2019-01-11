@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -21,14 +23,21 @@ public class Controller {
 	}
 
 	@GetMapping("/patients/{patientId}")
-	public Optional<Patient> getPatient(@PathVariable int patientId) {
+	public Optional<Patient> getPatient(@PathVariable String patientId) {
 
 		return patientRepository.findById(patientId);
 	}
 
 	@DeleteMapping("/patients/{patientId}")
-	public void deletePatient(@PathVariable int patientId) {
+	public void deletePatient(@PathVariable String patientId) {
 
 		patientRepository.deleteById(patientId);
 	}
+	
+	@PostMapping("/patient")
+	public void createPatient(@RequestBody Patient patient) {
+		patientRepository.save(patient);
+	}
+	
+	
 }
